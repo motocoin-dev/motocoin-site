@@ -1,1 +1,560 @@
-Coming soon!
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Motocoin</title>
+<meta name="keywords" content="motocoin, mine motocoin, motogame, bitcoin" />
+<meta name="description" content="Motocoin is the first Proof-of-Thought cryptocurrency" />
+<link rel="icon" type="image/png" href="images/coin.png" />
+
+<!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="magnific-popup/magnific-popup.css"> 
+
+<!-- jQuery for Magnific Popup -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+
+<!-- Magnific Popup core JS file -->
+<script src="magnific-popup/jquery.magnific-popup.min.js"></script> 
+
+<style type="text/css">
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #c2bead;
+	font-family: /*Tahoma, Geneva,*/ sans-serif;
+	font-size: 14px;
+	line-height: 19px; 
+	background-color: #2f2e28;
+    background-image: url(images/background.jpg);
+}
+
+.download_button{ 
+    width: 173px;
+    height: 32px;
+	display:inline-block;
+    background: url(images/download.png);
+}
+
+.download_button:hover{ 
+    background: url(images/download_hover.png);
+}
+
+a, a:link, a:visited { color: #34baf9; text-decoration: none; }
+a:hover { color: #CCFF00; text-decoration: underline; }
+
+p { margin: 0 0 10px 0; padding: 0; }
+img { border: none; }
+
+h1, h2, h3, h4, h5, h6 { color: #e2c934; }
+h1 { font-size: 24px; font-weight: normal; margin: 0 0 12px 0; padding: 0; text-align: center; }
+h2 { font-size: 20px; font-weight: normal; margin: 0 0 7px 0; font-weight: normal; }
+h3 { font-size: 16px; margin: 0 0 10px 0; padding: 0; padding: 0; font-weight: normal; text-align: center; }
+h4 { font-size: 14px; margin: 0 0 3px 0; padding: 0; }
+
+.image_wrapper { display: inline-block; border: 1px solid #000; background: #333; padding: 4px; margin-bottom: 10px; }
+.image_fl { float: left; margin: 3px 15px 0 0; }
+.image_fr { float: right; margin: 3px 0 0 15px; }
+
+#slider {
+	width: 970px;
+	padding: 20px 10px 0 20px;
+	margin: 0 auto;
+}
+
+#sidebar {
+	float: left;
+	width: 226px;
+	background: #5C5C54;
+	border: solid #888783 1px;
+	box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+	border-radius: 9px;
+	padding-top: 40px;
+	margin-top: -40px;
+	height: 730px;
+}
+
+#header {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -25px;
+	margin-bottom: 10px;
+	width: 226px;
+	height: 164px;
+	text-align: center;
+	padding: 30px 0 0 0;
+	background: radial-gradient(closest-side, white 0%,	#E0FCFD 40%, #CECECC 48%, #A5A49F 60%, #83827D 70%, #6E6D68 80%, #616159 90%, #5C5C54 100%);
+}
+
+#main {
+	float: right;
+	padding-top: 2px;
+	width: 700px;
+}
+
+#motologo {
+	display: block;
+	width: 700px;
+	height: 143px;
+	margin-bottom: 23px;
+	background: url(images/motologo.png) no-repeat;
+	background-position:center; 
+	
+	background-color: #201f1b;
+	border: solid 1px #403f3a;
+	border-radius:33px;
+	box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+}
+
+#content { 
+	height: 560px;
+	width: 700px;
+	background-color: #201f1b;
+	border: solid 1px #403f3a;
+	border-radius:9px;
+	box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+}
+
+.scroll {
+    height: 560px;
+    width: 700px;
+    overflow: hidden;
+    position: relative;
+    clear: left;
+}
+
+.scrollContainer div.panel {
+    padding: 20px;
+    height: 510px;
+    width: 640px;
+}
+
+ul.navigation {
+	width: 270px;
+    list-style: none;
+    margin: 0;
+	margin-left: -10px;
+    padding: 0;
+	text-align: left;
+}
+
+ul.navigation li {
+    display: inline-block;
+    margin: 0px;
+	padding: 0;
+}
+
+ul.navigation a {
+	display: block;
+	width: 190px;
+	height: 33px;
+	padding: 12px 0 0 80px;
+	margin-bottom: 5px;
+	color: #8a8980;
+	font-size: 16px;
+	font-weight: normal;
+    text-decoration: none;
+	position: relative;
+}
+
+ul.navi2 a { height: 48px; }
+
+ul.navigation a .ui_icon { position: absolute; top: 0; left: 15px; width: 40px; height: 40px; }
+
+ul.navigation a .home { background: url(images/home.png) no-repeat; }
+ul.navigation a .download { background: url(images/down.png) no-repeat; }
+ul.navigation a .mine { background:  url(images/mine.png) no-repeat; }
+ul.navigation a .discuss { top: 2px; background: url(images/discuss.png) no-repeat; }
+ul.navigation a .source { top: 10px; background: url(images/source.png)  no-repeat; }
+
+ul.navi a:hover, ul.navi a.chosen {
+	color: #201f1b;
+	background: url(images/menu_hover.png) no-repeat left;
+}
+
+ul.navi2 a:hover{
+	color: #201f1b;
+	background: url(images/menu_hover_ex.png) no-repeat left;
+}
+
+ul.navigation a:hover .home, ul.navigation a.chosen .home { background: url(images/home_hover.png) no-repeat; }
+ul.navigation a:hover .download, ul.navigation a.chosen .download { background: url(images/down_hover.png) no-repeat; }
+ul.navigation a:hover .mine, ul.navigation a.chosen .mine { background: url(images/mine_hover.png) no-repeat; }
+ul.navigation a:hover .discuss { background: url(images/discuss_hover.png) no-repeat; }
+ul.navigation a:hover .source { background: url(images/source_hover.png) no-repeat; }
+
+ul.navigation a:focus { outline: none; }
+
+div.download-windows
+{
+    float: left;
+	margin-right: 30px;
+}
+
+div.download-linux
+{
+    float: left;
+}
+
+#timer
+{
+    width: 130px;
+	position: relative;
+}
+
+#timer1, #timer2
+{
+    position: absolute;
+	font-size: 18px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+#timer-header
+{
+    font-weight: bold;
+/*	text-decoration:underline;*/
+	color: #DDC934;
+}
+	
+#timer-text
+{
+	font-size: 20px;
+    text-align: center;
+	float: right;
+	margin: 10px;
+	margin-right: 5px;
+	line-height: 25px;
+	color: blaxk;
+}
+
+#timer-div
+{
+	color: #CFCCBF;
+	border: solid 1px #403f3a;
+	border-radius:9px;
+	box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	height: 100px;
+	background: #707066 url(images/timer.png) no-repeat left center;
+}
+
+.digit
+{
+    font-family: monospace;
+    font-weight: bold;
+}
+
+a.button {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background: linear-gradient( to bottom, #DFDED2 0%, #BBB8AB 100% );
+	background-color:#ffffff;
+	border-radius:15px;
+	text-indent:0;
+	border:1px solid #d9d9d9;
+	display:inline-block;
+	color:#4D4C4C;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	font-style:normal;
+	height:30px;
+	line-height:30px;
+	width:162px;
+	text-decoration:none;
+	text-align:left;
+	text-shadow:1px 1px 0px #ffffff;
+	padding-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 10px;
+}
+
+a.button:hover {
+	box-shadow:inset 0px 1px 0px 0px #8EBC02;
+	background:linear-gradient( to bottom, #BEF200 0%, #396505 100% );
+	background-color:#88BC00;
+	border:1px solid #396505;
+	color:#FFFFFF;
+	text-shadow:1px 1px 0px #256700;
+}
+
+.mfp-with-zoom .mfp-container, .mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, .mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+a.screenshot-preview, a.screenshot-preview:hover, a.screenshot-preview:link, a.screenshot-preview:visited
+{
+    text-decoration: none;
+	margin-right: 5px;
+}
+
+a.screenshot-preview img
+{
+	border: solid 2px #403f3a;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+}
+
+.os-logo
+{
+    margin-bottom: -5px;
+    margin-right: 5px;
+}
+
+</style>
+
+<script type="text/javascript">
+    var StartPos = 0;
+	var Delta = 0;
+	var ElapsedTime = 0;
+	var RemainingTime;
+	
+	Image1= new Image();
+	Image1.src = "images/download_hover.png";
+	Image2 = new Image();
+	Image2.src = "images/home_hover.png";
+	Image3 = new Image();
+	Image3.src = "images/mine_hover.png";
+	Image4 = new Image();
+	Image4.src = "images/source_hover.png";
+	Image5 = new Image();
+	Image5.src = "images/discuss_hover.png";
+	Image6 = new Image();
+	Image6.src = "images/down_hover.png";
+	Image7 = new Image();
+	Image7.src = "images/menu_hover.png";
+	Image8 = new Image();
+	Image8.src = "images/menu_hover_ex.png";
+
+	function onHashChange()
+	{
+	    var hash = document.location.hash? document.location.hash : "#home";
+	    var matches = document.querySelectorAll("ul.navi a");
+		for (var i = 0; i < matches.length; i++)
+		{
+		    var element = matches[i];
+			if (element.attributes.href.value == hash)
+			    element.className = "chosen";
+			else
+			    element.className = "";
+	    }
+		
+		StartPos = document.getElementById("scroll").scrollTop;
+		Delta = document.getElementById(hash.substring(1) + "_scroll").offsetTop - StartPos;
+		ElapsedTime = 0;
+	}
+	
+	function format60(n)
+	{
+	    var i = n % 60;
+	    return ((i < 10)? "0" : "") + i;
+	}
+	
+	function renderTime(Id, Time)
+	{ 
+	    var Seconds = Math.floor(Time/1000);
+		var Minutes = Math.floor(Seconds/60);
+		var Hours = Math.floor(Minutes/60);
+		var Days = Math.floor(Hours/24);
+		var d = document.getElementById("d" + Id);
+		var h = document.getElementById("h" + Id);
+		var m = document.getElementById("m" + Id);
+		var s = document.getElementById("s" + Id);
+		d.innerHTML = Days;
+		h.innerHTML = format60(Hours % 24);
+		m.innerHTML = format60(Minutes);
+		s.innerHTML = format60(Seconds);
+	}
+	
+    function onLoad()
+	{
+	    var matches = document.querySelectorAll("ul.navi a");
+		for (var i = 0; i < matches.length; i++)
+			document.getElementById(matches[i].attributes.href.value.substring(1)).id += "_scroll";
+
+		var Scroll = document.getElementById("scroll");
+		setInterval(function()
+		{
+			var p = ElapsedTime/400;
+			if (p < 1)
+			{
+			    Scroll.scrollTop = (1 - Math.cos(p*Math.PI))*0.5*Delta + StartPos;
+			    ElapsedTime += 10;
+			}
+		}, 10);
+		
+		onHashChange();
+		
+		$('.screenshots').magnificPopup({
+		    delegate: 'a',
+		    type:'image',
+			gallery:{enabled:true},
+			zoom: {
+				enabled: true,
+				duration: 300,
+				easing: 'ease-in-out'
+			  },
+			mainClass: 'mfp-with-zoom',
+			callbacks: {
+ 			    buildControls: function() {
+                    this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+                }
+    
+            }
+		});
+		
+		var req = new XMLHttpRequest();
+		req.open('GET', "/empty?r=" + Math.floor(Math.random()*10000000), false);
+		req.send(null);
+		RemainingTime = 1400616000000 - (new Date(req.getResponseHeader("Date")).getTime());
+		
+		setInterval(function()
+		{
+			var phase = RemainingTime % 1000;
+			var alt = RemainingTime/1000 % 2;
+			var A = alt? 1 : 2;
+			var B = alt? 2 : 1;
+			var timerA = document.getElementById("timer" + A);
+			var timerB = document.getElementById("timer" + B);
+			renderTime(A, RemainingTime);
+			renderTime(B, RemainingTime + 1000);
+			var p = Math.min(phase/1000*2.7, 1);
+			timerB.style.opacity = p;
+			timerA.style.opacity = Math.sqrt(1 - p*p);
+			RemainingTime -= 10;
+		}, 10);
+		
+	}
+</script>
+</head>
+<body onload="onLoad();" onhashchange="onHashChange();">
+
+<div id="slider">
+    <div id="sidebar">
+    	<div id="header" style="position: relative">
+		    <div style="position: relative; margin-left: 1px; margin-bottom: -79px; outline: 1px solid #656259; border-bottom: 1px solid #808074; border-top: 1px solid #808074; width: 224px; height: 79px; top: 29px; background: linear-gradient(to right, #484742 0%, #4C4B46 10%, #53534B 20%, #5D5A53 30%, #646059 40%, #67645B 50%, #625F56 60%, #5C5952 70%, #52514C 80%, #4C4B46 90%, #474641 100%)">
+			</div>
+        	<a href="#home" style="position: relative"><img src="images/coin.png" alt="" /></a>
+        </div>
+        
+        <ul class="navigation navi">
+            <li><a href="#home">Main page<span class="ui_icon home"></span></a></li>
+            <li><a href="#download">Download<span class="ui_icon download"></span></a></li>
+            <li><a href="#mine">Mine<span class="ui_icon mine"></span></a></li>
+        </ul>
+        <ul class="navigation navi2">
+            <li><a href="https://github.com/motocoin-dev/motocoin">Source code <br /> on GitHub <span class="ui_icon source"></span></a></li>
+        </ul>
+		<div id="timer-div">
+		    <div id="timer-text">
+			    <span id="timer-header">Release in:</span>
+				<div id="timer">
+				    <div id="timer1"><span class="digit" id="d1">??</span> days<br /><span class="digit" id="h1">??</span>h <span class="digit" id="m1">??</span>m <span class="digit" id="s1">??</span>s</div>
+				    <div id="timer2"><span class="digit" id="d2">??</span> days<br /><span class="digit" id="h2">??</span>h <span class="digit" id="m2">??</span>m <span class="digit" id="s2">??</span>s</div>
+				</div>
+			</div>
+		</div>
+    </div> <!-- end of sidebar -->
+	<div id="main">
+		<a href="#home">
+		    <div id="motologo"></div>
+		</a>
+        <div id="content">
+            <div class="scroll" id="scroll">
+                <div class="scrollContainer">
+                    <div class="panel" id="home">
+                        <h1>The first Proof-of-Thought crypto-currency</h1>  
+                        <h3>No CPUs, GPUs or ASICs. Mine it only with your brain!</h3>   
+                        <p>
+							<b>Motocoin</b> is a crypto-currency of a new kind. It is inspired by Bitcoin but has major difference. Bitcoin is based on a scheme called <i>proof-of-work</i>. In this scheme miners perform some computations (called work) on their computers and then use proof of that work to secure coin transactions and to get their reward. Motocoin is similar to Bitcoin but instead of relying on a work done by computers it relies on a work done by humans. This work consists of playing 2D moto-simulator game, hence the currency name. People play the game and get rewarded for this. We call this scheme <i>proof-of-thought</i>.
+						</p>
+						<h4>Advantages:</h4>
+						<ul style="margin: 0; margin-bottom: 10px;">
+							<li>No need for expensive mining hardware. To be a miner you just need an average computer and some skill at videogames.</li>
+							<li>No energy is wasted on useless computations.</li>
+							<li>It is more secure as it is almost impossible to perform 51% attack. If you control enough hardware you can perform 51% attack on a classic proof-of-work crypto-currency, machines wouldn't bore to fulfill your evil wishes. But people prefer to work for their profit and it would be too expensive to hire enough people, especially considering that most skilled players would rather mine <b>Motocoin</b> than destroy it. </li>
+						</ul>
+						<h4>Network parameters:</h4>
+						<ul style="margin: 0">
+							<li>New block every 5 minutes.</li>
+							<li>Initial reward is 100 coins per block.</li>
+							<li>Reward is halved every 200 000 blocks (every two years) but will never be less then 2 coins per block.</li>
+							<li>≈40 mln coins in first 12 years, then 200 000 coins per year.</li>
+						</ul>
+						<!--<br /><div style="text-align: center; padding-top: 10px">
+						    <a href="#download" class="download_button"></a>
+						</div>-->
+                    </div> <!-- end of home -->
+                    <div class="panel" id="download">
+                        <h1>Download Motocoin client</h1>
+						<p>
+						    <span style="color: red; font-weight: bold;">Important:</span>
+						    Motocoin will be released at <b>20 May 2014, 20:00 UTC</b> on this page. It will be available for download in a few hours before release in encrypted archives. Password for archives will be announced at <b>20 May 2014, 20:00 UTC</b> on this page.
+						</p>
+						<p style="color: red; font-size: 20px;">Not yet available</p>
+						<br />
+                        <h1>Download Motogame</h1>
+						<p>
+						    While you are waiting for release date you may play Motogame. It is available right now but it is only for demonstration purposes; you can't mine anything with it. OpenGL 3 is required.
+						</p>
+						<a style="margin-right: 30px" href="motogame/motogame-win.7z"><img src="images/os_windows.png" alt="Windows" class="os-logo"/>Windows</a>
+						<a href="motogame/motogame-linux.tar.xz"><img src="images/os_linux.png" alt="GNU/Linux" class="os-logo"/>GNU/Linux</a>
+                    </div>
+                    <div class="panel" id="mine">
+                        <h1>Motocoin mining</h1>
+                        <p>
+						    Unlike other crypto-currentcies, you cannot mine Motocoin just by running some software; you will have to play the game called Motogame. This game is inspired by <a href="http://elastomania.com">Elastomania</a>, it is a 2D moto-simulator. You can control your bike using arrow keys and space. Your goal is to touch the coin with wheel or head. You need to complete any level in time less than current target time. Target time will be changed approximately every 3.5 days to sustain constant block generation speed.
+						</p>
+						<p style="margin-bottom: 0">
+							Here is what you need to do to start mining:
+						</p>
+						<ol style="margin-top: 1px">
+						    <li>Download <a href="#download">Motocoin client</a>.</li>
+						    <li>Run it and wait until your client will synchronize with the network (this make take a while).</li>
+						    <li>Go to the <b>Game</b> tab and press <b>Play to mine</b> button.</li>
+							<li>Keep pressing <b>F6</b> until you will see a level that you think you can complete.</li>
+							<li>Play the game.</li>
+						</ol>
+						<p>
+							When you will hit the coin you will get reward (currently 100 motocoins). There is some chance that you will not get any reward, this may happen if someone else will complete level in the same moment as you. While playing you may see sudden level changes, they happen when someone else successfully completes a level.
+						</p>
+						<!--<p>
+						    Motogame screenshots:
+						</p> -->
+						<div class="screenshots">
+							<a class="screenshot-preview" href="screenshots/motogame0.jpg">
+							    <img src="screenshots/motogame0-preview.png" />
+							</a>
+							<a class="screenshot-preview" href="screenshots/motogame1.jpg">
+							    <img src="screenshots/motogame1-preview.png" />
+							</a>
+							<a class="screenshot-preview" href="screenshots/motogame2.jpg">
+							    <img src="screenshots/motogame2-preview.png" />
+							</a>
+						</div>
+                    </div>     
+                </div>
+			</div> <!-- end of scroll -->
+        </div> <!-- end of content -->
+    </div> <!-- end of main -->
+	<div style="clear: both; height: 13px;">
+	</div>
+</div>
+</body>
+</html>
