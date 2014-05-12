@@ -3,18 +3,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <title>Motocoin</title>
-<meta name="keywords" content="motocoin, mine motocoin, motogame, bitcoin" />
-<meta name="description" content="Motocoin is the first Proof-of-Thought cryptocurrency" />
+<meta name="keywords" content="motocoin, mine motocoin, motogame, bitcoin, human-mineable, human mine-able, proof of thought, proof of play" />
+<meta name="description" content="Motocoin is the first Proof-of-Play cryptocurrency" />
 <link rel="icon" type="image/png" href="images/coin.png" />
 
 <!-- Magnific Popup core CSS file -->
-<link rel="stylesheet" href="magnific-popup/magnific-popup.css"> 
+<link rel="stylesheet" href="magnific-popup/magnific-popup.css">
 
 <!-- jQuery for Magnific Popup -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <!-- Magnific Popup core JS file -->
-<script src="magnific-popup/jquery.magnific-popup.min.js"></script> 
+<script src="magnific-popup/jquery.magnific-popup.min.js"></script>
 
 <style type="text/css">
 body {
@@ -23,19 +23,19 @@ body {
 	color: #c2bead;
 	font-family: /*Tahoma, Geneva,*/ sans-serif;
 	font-size: 14px;
-	line-height: 19px; 
+	line-height: 19px;
 	background-color: #2f2e28;
     background-image: url(images/background.jpg);
 }
 
-.download_button{ 
+.download_button{
     width: 173px;
     height: 32px;
 	display:inline-block;
     background: url(images/download.png);
 }
 
-.download_button:hover{ 
+.download_button:hover{
     background: url(images/download_hover.png);
 }
 
@@ -97,15 +97,15 @@ h4 { font-size: 14px; margin: 0 0 3px 0; padding: 0; }
 	height: 143px;
 	margin-bottom: 23px;
 	background: url(images/motologo.png) no-repeat;
-	background-position:center; 
-	
+	background-position:center;
+
 	background-color: #201f1b;
 	border: solid 1px #403f3a;
 	border-radius:33px;
 	box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
 }
 
-#content { 
+#content {
 	height: 560px;
 	width: 700px;
 	background-color: #201f1b;
@@ -217,7 +217,7 @@ div.download-linux
 /*	text-decoration:underline;*/
 	color: #DDC934;
 }
-	
+
 #timer-text
 {
 	font-size: 20px;
@@ -324,7 +324,7 @@ a.screenshot-preview img
 	var Delta = 0;
 	var ElapsedTime = 0;
 	var RemainingTime;
-	
+
 	Image1 = new Image();
 	Image1.src = "images/menu_hover_ex.png";
 	Image2 = new Image();
@@ -352,20 +352,20 @@ a.screenshot-preview img
 			else
 			    element.className = "";
 	    }
-		
+
 		StartPos = document.getElementById("scroll").scrollTop;
 		Delta = document.getElementById(hash.substring(1) + "_scroll").offsetTop - StartPos;
 		ElapsedTime = 0;
 	}
-	
+
 	function format60(n)
 	{
 	    var i = n % 60;
 	    return ((i < 10)? "0" : "") + i;
 	}
-	
+
 	function renderTime(Id, Time)
-	{ 
+	{
 	    var Seconds = Math.floor(Time/1000);
 		var Minutes = Math.floor(Seconds/60);
 		var Hours = Math.floor(Minutes/60);
@@ -379,7 +379,7 @@ a.screenshot-preview img
 		m.innerHTML = format60(Minutes);
 		s.innerHTML = format60(Seconds);
 	}
-	
+
     function onLoad()
 	{
 	    var matches = document.querySelectorAll("ul.navi a");
@@ -396,9 +396,9 @@ a.screenshot-preview img
 			    ElapsedTime += 10;
 			}
 		}, 10);
-		
+
 		onHashChange();
-		
+
 		$('.screenshots').magnificPopup({
 		    delegate: 'a',
 		    type:'image',
@@ -413,15 +413,15 @@ a.screenshot-preview img
  			    buildControls: function() {
                     this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
                 }
-    
+
             }
 		});
-		
+
 		var req = new XMLHttpRequest();
 		req.open('GET', "/empty?r=" + Math.floor(Math.random()*10000000), false);
 		req.send(null);
 		RemainingTime = 1400616000000 - (new Date(req.getResponseHeader("Date")).getTime());
-		
+
 		setInterval(function()
 		{
 			var phase = RemainingTime % 1000;
@@ -437,7 +437,7 @@ a.screenshot-preview img
 			timerA.style.opacity = Math.sqrt(1 - p*p);
 			RemainingTime -= 10;
 		}, 10);
-		
+
 	}
 </script>
 </head>
@@ -450,7 +450,7 @@ a.screenshot-preview img
 			</div>
         	<a href="#home" style="position: relative"><img src="images/coin.png" alt="" /></a>
         </div>
-        
+
         <ul class="navigation navi">
             <li><a href="#home">Main page<span class="ui_icon home"></span></a></li>
             <li><a href="#download">Download<span class="ui_icon download"></span></a></li>
@@ -478,10 +478,10 @@ a.screenshot-preview img
             <div class="scroll" id="scroll">
                 <div class="scrollContainer">
                     <div class="panel" id="home">
-                        <h1>The first Proof-of-Thought crypto-currency</h1>  
-                        <h3>No CPUs, GPUs or ASICs. Mine it only with your brain!</h3>   
+                        <h1>The first Proof-of-Play crypto-currency</h1>
+                        <h3>No CPUs, GPUs or ASICs. Mine it only with your brain!</h3>
                         <p>
-							<b>Motocoin</b> is a crypto-currency of a new kind. It is inspired by Bitcoin but has major difference. Bitcoin is based on a scheme called <i>proof-of-work</i>. In this scheme miners perform some computations (called work) on their computers and then use proof of that work to secure coin transactions and to get their reward. Motocoin is similar to Bitcoin but instead of relying on a work done by computers it relies on a work done by humans. This work consists of playing 2D moto-simulator game, hence the currency name. People play the game and get rewarded for this. We call this scheme <i>proof-of-thought</i>.
+							<b>Motocoin</b> is a crypto-currency of a new kind. It is inspired by Bitcoin but has major difference. Bitcoin is based on a scheme called <i>proof-of-work</i>. In this scheme miners perform some computations (called work) on their computers and then use proof of that work to secure coin transactions and to get their reward. Motocoin is similar to Bitcoin but instead of relying on a work done by computers it relies on a work done by humans. This work consists of playing 2D moto-simulator game, hence the currency name. People play the game and get rewarded for this. We call this scheme <i>proof-of-play</i>.
 						</p>
 						<h4>Advantages:</h4>
 						<ul style="margin: 0; margin-bottom: 10px;">
