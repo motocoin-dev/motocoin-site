@@ -195,59 +195,6 @@ div.download-linux
     float: left;
 }
 
-#timer
-{
-    width: 130px;
-	position: relative;
-}
-
-#timer1, #timer2
-{
-    position: absolute;
-	font-size: 18px;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
-}
-
-#timer-header
-{
-    font-weight: bold;
-/*	text-decoration:underline;*/
-	color: #DDC934;
-}
-
-#timer-text
-{
-	font-size: 20px;
-    text-align: center;
-	float: right;
-	margin: 10px;
-	margin-right: 5px;
-	line-height: 25px;
-	color: blaxk;
-}
-
-#timer-div
-{
-	color: #CFCCBF;
-	border: solid 1px #403f3a;
-	border-radius:9px;
-	box-shadow: 0 0 10px 5px rgba(0,0,0,0.6);
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-top: 20px;
-	height: 100px;
-	background: #707066 url(images/timer.png) no-repeat left center;
-}
-
-.digit
-{
-    font-family: monospace;
-    font-weight: bold;
-}
-
 a.button {
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
 	background: linear-gradient( to bottom, #DFDED2 0%, #BBB8AB 100% );
@@ -323,7 +270,6 @@ a.screenshot-preview img
     var StartPos = 0;
 	var Delta = 0;
 	var ElapsedTime = 0;
-	var RemainingTime;
 
 	Image1 = new Image();
 	Image1.src = "images/menu_hover_ex.png";
@@ -364,22 +310,6 @@ a.screenshot-preview img
 	    return ((i < 10)? "0" : "") + i;
 	}
 
-	function renderTime(Id, Time)
-	{
-	    var Seconds = Math.floor(Time/1000);
-		var Minutes = Math.floor(Seconds/60);
-		var Hours = Math.floor(Minutes/60);
-		var Days = Math.floor(Hours/24);
-		var d = document.getElementById("d" + Id);
-		var h = document.getElementById("h" + Id);
-		var m = document.getElementById("m" + Id);
-		var s = document.getElementById("s" + Id);
-		d.innerHTML = Days;
-		h.innerHTML = format60(Hours % 24);
-		m.innerHTML = format60(Minutes);
-		s.innerHTML = format60(Seconds);
-	}
-
     function onLoad()
 	{
 	    var matches = document.querySelectorAll("ul.navi a");
@@ -416,28 +346,6 @@ a.screenshot-preview img
 
             }
 		});
-
-		var req = new XMLHttpRequest();
-		req.open('GET', "/empty?r=" + Math.floor(Math.random()*10000000), false);
-		req.send(null);
-		RemainingTime = 1400616000000 - (new Date(req.getResponseHeader("Date")).getTime());
-
-		setInterval(function()
-		{
-			var phase = RemainingTime % 1000;
-			var alt = RemainingTime/1000 % 2;
-			var A = alt? 1 : 2;
-			var B = alt? 2 : 1;
-			var timerA = document.getElementById("timer" + A);
-			var timerB = document.getElementById("timer" + B);
-			renderTime(A, RemainingTime);
-			renderTime(B, RemainingTime + 1000);
-			var p = Math.min(phase/1000*2.7, 1);
-			timerB.style.opacity = p;
-			timerA.style.opacity = Math.sqrt(1 - p*p);
-			RemainingTime -= 10;
-		}, 10);
-
 	}
 </script>
 </head>
@@ -460,15 +368,6 @@ a.screenshot-preview img
         <ul class="navigation navi2">
             <li><a href="https://github.com/motocoin-dev/motocoin">Source code <br /> on GitHub <span class="ui_icon source"></span></a></li>
         </ul>
-		<div id="timer-div">
-		    <div id="timer-text">
-			    <span id="timer-header">Release in:</span>
-				<div id="timer">
-				    <div id="timer1"><span class="digit" id="d1">??</span> days<br /><span class="digit" id="h1">??</span>h <span class="digit" id="m1">??</span>m <span class="digit" id="s1">??</span>s</div>
-				    <div id="timer2"><span class="digit" id="d2">??</span> days<br /><span class="digit" id="h2">??</span>h <span class="digit" id="m2">??</span>m <span class="digit" id="s2">??</span>s</div>
-				</div>
-			</div>
-		</div>
     </div> <!-- end of sidebar -->
 	<div id="main">
 		<a href="#home">
@@ -503,18 +402,11 @@ a.screenshot-preview img
                     <div class="panel" id="download">
                         <h1>Download Motocoin client</h1>
 						<p>
-						    <span style="color: red; font-weight: bold;">Important:</span>
-						    Motocoin will be released at <b>20 May 2014, 20:00 UTC</b>. Currently, files are in password-protected archives. Password for archives will be announced at <b>20 May 2014, 20:00 UTC</b> on this page.
+						    <span style="color: red; font-weight: bold;">Password:</span> kLb7z8iRq9uTG5Lii22
 						</p>
 						<a style="margin-right: 30px" href="https://mega.co.nz/#!rIxUyYKb!p87D1j888AOk0JxbbqdwRM7A_nrjoIXWrSoCLbYItPY"><img src="images/os_windows.png" alt="Windows" class="os-logo"/>Windows</a>
 						<a href="https://mega.co.nz/#!CJABlAhS!TNkd_FyHeiBRn-e_lz9P7LMCdQMp7hLu2Ik5bIavNSo"><img src="images/os_linux.png" alt="GNU/Linux" class="os-logo"/>GNU/Linux</a>
-						<br /><br />
-                        <h1>Download Motogame</h1>
-						<p>
-						    While you are waiting for release date you may play Motogame. It is available right now but it is only for demonstration purposes; you can't mine anything with it. OpenGL 3 is required.
-						</p>
-						<a style="margin-right: 30px" href="motogame/motogame-win.7z"><img src="images/os_windows.png" alt="Windows" class="os-logo"/>Windows</a>
-						<a href="motogame/motogame-linux.tar.xz"><img src="images/os_linux.png" alt="GNU/Linux" class="os-logo"/>GNU/Linux</a>
+						<br />
                     </div>
                     <div class="panel" id="mine">
                         <h1>Motocoin mining</h1>
