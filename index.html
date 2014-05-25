@@ -163,6 +163,7 @@ ul.navigation a .ui_icon { position: absolute; top: 0; left: 15px; width: 40px; 
 ul.navigation a .home { background: url(images/home.png) no-repeat; }
 ul.navigation a .download { background: url(images/down.png) no-repeat; }
 ul.navigation a .mine { background:  url(images/mine.png) no-repeat; }
+ul.navigation a .exchange { background:  url(images/exch.png) no-repeat; }
 ul.navigation a .discuss { top: 2px; background: url(images/discuss.png) no-repeat; }
 ul.navigation a .source { top: 10px; background: url(images/source.png)  no-repeat; }
 
@@ -179,6 +180,7 @@ ul.navi2 a:hover{
 ul.navigation a:hover .home, ul.navigation a.chosen .home { background: url(images/home_hover.png) no-repeat; }
 ul.navigation a:hover .download, ul.navigation a.chosen .download { background: url(images/down_hover.png) no-repeat; }
 ul.navigation a:hover .mine, ul.navigation a.chosen .mine { background: url(images/mine_hover.png) no-repeat; }
+ul.navigation a:hover .exchange, ul.navigation a.chosen .exchange { background: url(images/exch_hover.png) no-repeat; }
 ul.navigation a:hover .discuss { background: url(images/discuss_hover.png) no-repeat; }
 ul.navigation a:hover .source { background: url(images/source_hover.png) no-repeat; }
 
@@ -285,6 +287,8 @@ a.screenshot-preview img
 	Image6.src = "images/down_hover.png";
 	Image7 = new Image();
 	Image7.src = "images/menu_hover.png";
+	Image8 = new Image();
+	Image8.src = "images/exch_hover.png";
 
 	function onHashChange()
 	{
@@ -363,6 +367,7 @@ a.screenshot-preview img
             <li><a href="#home">Main page<span class="ui_icon home"></span></a></li>
             <li><a href="#download">Download<span class="ui_icon download"></span></a></li>
             <li><a href="#mine">Mine<span class="ui_icon mine"></span></a></li>
+            <li><a href="#exchange">Exhange<span class="ui_icon exchange"></span></a></li>
             <li><a href="#discuss">Discuss<span class="ui_icon discuss"></span></a></li>
         </ul>
         <ul class="navigation navi2">
@@ -441,6 +446,13 @@ a.screenshot-preview img
 							    <img src="screenshots/motogame2-preview.png" />
 							</a>
 						</div>
+                    </div>
+                    <div class="panel" id="exchange">
+                        <h1>Buy/sell Motocoin</h1>
+						Below is list of exchanges where you can buy or sell motocoins:
+						<ul>
+						<li>Exchange Motocoin on <a href="https://c-cex.com/?p=moto-btc">C-CEX</a>.</li>
+						</li>
                     </div>
                     <div class="panel" id="discuss">
                         <h1>Discuss Motocoin</h1>
