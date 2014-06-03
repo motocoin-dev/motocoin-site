@@ -70,7 +70,7 @@ h4 { font-size: 14px; margin: 0 0 3px 0; padding: 0; }
 	border-radius: 9px;
 	padding-top: 40px;
 	margin-top: -40px;
-	height: 770px;
+	height: 800px;
 }
 
 #header {
@@ -106,7 +106,7 @@ h4 { font-size: 14px; margin: 0 0 3px 0; padding: 0; }
 }
 
 #content {
-	height: 600px;
+	height: 630px;
 	width: 700px;
 	background-color: #201f1b;
 	border: solid 1px #403f3a;
@@ -115,7 +115,7 @@ h4 { font-size: 14px; margin: 0 0 3px 0; padding: 0; }
 }
 
 .scroll {
-    height: 600px;
+    height: 630px;
     width: 700px;
     overflow: hidden;
     position: relative;
@@ -124,7 +124,7 @@ h4 { font-size: 14px; margin: 0 0 3px 0; padding: 0; }
 
 .scrollContainer div.panel {
     padding: 20px;
-    height: 550px;
+    height: 580px;
     width: 640px;
 }
 
@@ -395,10 +395,9 @@ a.screenshot-preview img
 						</ul>
 						<h4>Network parameters:</h4>
 						<ul style="margin: 0; margin-bottom: 10px;">
-							<li>A new block is generated every 1 minute.</li>
-							<li>The initial reward is 20 motocoins per block.</li>
-							<li>The block reward gets halved every 1'000'000 blocks (every two years), but it will never be less than 0.4 motocoins per block.</li>
-							<li>Difficulty is adjusted every 2000 blocks.</li>
+							<li>Blocks are generated on average every 60 seconds.</li>
+							<li>The reward for solving a block starts at 20 motocoins, which is halved every 1'000'000 blocks (about two years) and stops decreasing at 0.4 motocoins per block.</li>
+							<li>Mining difficulty is adjusted every 2000 blocks through lowering the target time if blocks took less than an average of 60 seconds to generate, or raising the target time if blocks took longer than that.</li>
 							<li>≈40 million coins are to be generated during the first 12 years and ≈200'000 coins per year after.</li>
 						    <li>The 3 developers of Motocoin were each rewarded 150K motocoins, which ensured them a strong reason to support Motocoin. Large portions of these coins will be used for <a href="https://bitcointalk.org/index.php?topic=591724.0">bounties</a> and giveaways. More than 10000 MOTO has been given back to the community already, with 30000 MOTO still up for grabs and much set aside for more giveaways and rewards for future contributions by the community.</li>
 						<!--<br /><div style="text-align: center; padding-top: 10px">
